@@ -1,0 +1,52 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: "es"
+
+collections:
+  - name: "catalogo"
+    label: "Catalogo de articulos"
+    files:
+      - label: "Articulos"
+        name: "products"
+        file: "content/products.json"
+        format: "json"
+        fields:
+          - label: "Productos"
+            name: "products"
+            widget: "list"
+            summary: "{{fields.name}} - {{fields.category}}"
+            fields:
+              - label: "Nombre"
+                name: "name"
+                widget: "string"
+              - label: "Categoria"
+                name: "category"
+                widget: "select"
+                options:
+                  - "Regalos"
+                  - "Hogar"
+                  - "Papeleria"
+                  - "Accesorios"
+              - label: "Precio"
+                name: "price"
+                widget: "number"
+                value_type: "int"
+                min: 0
+              - label: "Disponibilidad"
+                name: "stock"
+                widget: "number"
+                value_type: "int"
+                min: 0
+              - label: "Color de respaldo"
+                name: "color"
+                widget: "color"
+                enableAlpha: false
+              - label: "Foto"
+                name: "image"
+                widget: "image"
+                required: true

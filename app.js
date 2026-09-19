@@ -7,13 +7,24 @@ const starterProducts = [
   { id: 6, name: 'Taza de buenos dias', category: 'Hogar', price: 39000, stock: 5, color: '#aebfb4', image: 'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=900&q=85' }
 ];
 const categories = ['Todos', 'Regalos', 'Hogar', 'Papeleria', 'Accesorios'];
-let products = JSON.parse(localStorage.getItem('detalles-johana-products') || 'null') || starterProducts;
+let products = [];
 let favorites = JSON.parse(localStorage.getItem('detalles-johana-favorites') || '[]');
 let activeCategory = 'Todos';
 let showingFavorites = false;
 const $ = (selector) => document.querySelector(selector);
 const money = (value) => `$${Number(value || 0).toLocaleString('es-CO')}`;
-const persist = () => { localStorage.setItem('detalles-johana-products', JSON.stringify(products)); localStorage.setItem('detalles-johana-favorites', JSON.stringify(favorites)); };
+const persist = () => { localStorage.setItem('detalles-johana-favorites', JSON.stringify(favorites)); };
+async function loadProducts() {
+  try {
+    const response = await fetch('content/products.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('No se pudo cargar el catalogo');
+    const catalog = await response.json();
+    products = catalog.products || starterProducts;
+  } catch (error) {
+    products = starterProducts;
+  }
+  renderAll();
+}
 function productVisual(product) { return product.image ? `<img src="${product.image}" alt="${product.name}" loading="lazy">` : '<span class="fallback-mark">DJ</span>'; }
 function productCard(product) {
   const isFavorite = favorites.includes(product.id);
@@ -43,4 +54,4 @@ const imageDialog = $('#imageDialog');
 function openImage(product) { $('#expandedImage').src = product.image; $('#expandedImage').alt = product.name; $('#expandedImageTitle').textContent = product.name; imageDialog.showModal(); }
 $('#closeImageButton').addEventListener('click', () => imageDialog.close());
 imageDialog.addEventListener('click', (event) => { if (event.target === imageDialog) imageDialog.close(); });
-renderAll();
+loadProducts();
