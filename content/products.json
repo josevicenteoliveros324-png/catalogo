@@ -1,10 +1,12 @@
 {
   "products": [
-    { "id": 1, "name": "Caja de buenos deseos", "category": "Regalos", "price": 68000, "stock": 4, "color": "#d7a18c", "image": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=900&q=85" },
-    { "id": 2, "name": "Vela calma de vainilla", "category": "Hogar", "price": 42000, "stock": 8, "color": "#d9c2a6", "image": "https://images.unsplash.com/photo-1602874801006-e26f0c2f5b2?auto=format&fit=crop&w=900&q=85" },
-    { "id": 3, "name": "Agenda para tus ideas", "category": "Papeleria", "price": 35000, "stock": 0, "color": "#b9c7bc", "image": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=900&q=85" },
-    { "id": 4, "name": "Aretes luz dorada", "category": "Accesorios", "price": 55000, "stock": 3, "color": "#d7b86e", "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=900&q=85" },
-    { "id": 5, "name": "Kit para celebrar", "category": "Regalos", "price": 89000, "stock": 2, "color": "#c88772", "image": "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=900&q=85" },
-    { "id": 6, "name": "Taza de buenos dias", "category": "Hogar", "price": 39000, "stock": 5, "color": "#aebfb4", "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=900&q=85" }
+    {
+      "name": "Gotas de color ( perfume original )",
+      "category": "Regalos",
+      "price": 210000,
+      "stock": 1,
+      "color": "#d24343",
+      "image": "/images/uploads/bc9cc308-53e5-4327-9097-71345fc655dd.jpeg"
+    }
   ]
 }
