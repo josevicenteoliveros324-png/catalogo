@@ -1,0 +1,9 @@
+{
+  "name": "Detalles Johana Catalogo",
+  "short_name": "DJ Catalogo",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f8f4ed",
+  "theme_color": "#f8f4ed",
+  "description": "Catalogo de articulos y detalles especiales."
+}

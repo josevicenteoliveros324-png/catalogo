@@ -3,157 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f5efe8">
-  <meta name="description" content="Catalogo de detalles especiales de Detalles Johana.">
+  <meta name="theme-color" content="#f8f4ed">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
-  <title>Detalles Johana | Catalogo</title>
+  <title>Detalles Johana Catalogo</title>
 </head>
 <body>
-  <div class="bg-blur blur-one"></div>
-  <div class="bg-blur blur-two"></div>
-
   <main class="app-shell">
     <header class="topbar">
-      <a class="brand" href="#inicio" aria-label="Detalles Johana, inicio">
-        <span class="brand-mark">DJ</span>
-        <span class="brand-text">
-          <strong>Detalles</strong>
-          <em>Johana</em>
-        </span>
-      </a>
-
-      <nav class="main-nav" aria-label="Navegación principal">
-        <a class="nav-link is-active" href="#catalogo">Catálogo</a>
-        <a class="nav-link" href="tel:+573148680936" aria-label="Llamar al 3148680936">314 868 0936</a>
-        <button class="nav-link icon-button" id="favoritesButton" type="button">
-          Favoritos <span id="favoriteCount">0</span>
-        </button>
-      </nav>
-
-      <button class="primary-button compact" id="addProductButton" type="button">
-        <span aria-hidden="true">+</span> Nuevo articulo
-      </button>
+      <a class="brand" href="#inicio" aria-label="Detalles Johana, inicio"><span class="brand-mark">DJ</span><span><strong>Detalles</strong><em>Johana</em></span></a>
+      <nav class="main-nav" aria-label="Navegacion principal"><a class="nav-link is-active" href="#catalogo">Catalogo</a><a class="nav-link" href="tel:+573148680936" aria-label="Llamar al 3148680936">314 868 0936</a><button class="nav-link" id="favoritesButton" type="button">Favoritos <span id="favoriteCount">0</span></button></nav>
     </header>
-
     <section class="hero" id="inicio" aria-labelledby="heroTitle">
-      <div class="hero-copy">
-        <p class="eyebrow">REGALOS CON INTENCIÓN</p>
-        <h1 id="heroTitle">Pequeños detalles,<br><i>grandes recuerdos.</i></h1>
-        <p class="hero-text">
-          Organizá tus productos favoritos, encuentra el regalo ideal y mantené tu catálogo siempre listo para compartir.
-        </p>
-
-        <div class="hero-actions">
-          <a class="dark-button" href="#catalogo">Explorar catálogo <span aria-hidden="true">↘</span></a>
-          <div class="mini-badges">
-            <span>Elegidos</span>
-            <span>Hechos con cariño</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-art" aria-label="Selección de detalles especiales">
-        <div class="hero-note">hecho<br>con cariño</div>
-        <div class="hero-photo"></div>
-        <span class="hero-stamp">PARA<br>TI</span>
-      </div>
+      <div class="hero-copy"><p class="eyebrow">REGALOS CON INTENCION</p><h1 id="heroTitle">Pequenos detalles,<br><i>grandes recuerdos.</i></h1><p class="hero-text">Organiza tus articulos, encuentra el regalo ideal y manten tu catalogo siempre listo para compartir.</p><a class="dark-button" href="#catalogo">Explorar catalogo <span aria-hidden="true">↘</span></a></div>
+      <div class="hero-art" aria-label="Seleccion de detalles especiales"><div class="hero-note">hecho<br>con carino</div><div class="hero-photo"></div><span class="hero-stamp">PARA<br>TI</span></div>
     </section>
-
     <section class="catalog-section" id="catalogo" aria-labelledby="catalogTitle">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">LA COLECCIÓN</p>
-          <h2 id="catalogTitle">Articulos destacados</h2>
-        </div>
-
-        <div class="catalog-stats" aria-label="Resumen del catálogo">
-          <span><strong id="productCount">0</strong> articulos</span>
-          <span><strong id="availableCount">0</strong> disponibles</span>
-        </div>
-      </div>
-
-      <div class="catalog-tools">
-        <label class="search-box">
-          <span aria-hidden="true">⌕</span>
-          <input id="searchInput" type="search" placeholder="Buscar un articulo..." aria-label="Buscar articulos">
-        </label>
-        <div class="filter-row" id="filterRow" aria-label="Filtrar por categoría"></div>
-      </div>
-
+      <div class="section-heading"><div><p class="eyebrow">LA COLECCION</p><h2 id="catalogTitle">Articulos destacados</h2></div><div class="catalog-stats" aria-label="Resumen del catalogo"><span><strong id="productCount">0</strong> articulos</span><span><strong id="availableCount">0</strong> disponibles</span></div></div>
+      <div class="catalog-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Buscar un articulo..." aria-label="Buscar articulos"></label><div class="filter-row" id="filterRow" aria-label="Filtrar por categoria"></div></div>
       <div class="product-grid" id="productGrid"></div>
     </section>
-
-    <footer class="footer">
-      <span>Detalles Johana</span>
-      <a href="tel:+573148680936">314 868 0936</a>
-      <span>Un detalle pensado para cada historia.</span>
-    </footer>
+    <footer class="footer"><span>Detalles Johana</span><a href="tel:+573148680936">314 868 0936</a><span>Un detalle pensado para cada historia.</span></footer>
   </main>
-
-  <dialog id="productDialog">
-    <form id="productForm" novalidate>
-      <div class="dialog-heading">
-        <div>
-          <p class="eyebrow">NUEVO ARTICULO</p>
-          <h2>Agrega un detalle</h2>
-        </div>
-        <button class="close-button" id="closeProductButton" type="button" aria-label="Cerrar">×</button>
-      </div>
-
-      <label>
-        Nombre del articulo
-        <input name="name" required maxlength="45" placeholder="Ej. Vela aromatica">
-      </label>
-
-      <div class="form-row">
-        <label>
-          Categoria
-          <select name="category">
-            <option value="Regalos">Regalos</option>
-            <option value="Hogar">Hogar</option>
-            <option value="Papeleria">Papeleria</option>
-            <option value="Accesorios">Accesorios</option>
-          </select>
-        </label>
-
-        <label>
-          Precio
-          <input name="price" type="number" min="0" step="100" required placeholder="45000">
-        </label>
-      </div>
-
-      <div class="form-row">
-        <label>
-          Disponibilidad
-          <input name="stock" type="number" min="0" step="1" required value="1">
-        </label>
-
-        <label>
-          Color de respaldo
-          <input name="color" type="color" value="#d7a18c">
-        </label>
-      </div>
-
-      <label>
-        Foto del articulo
-        <input name="imageFile" type="file" accept="image/*" required>
-      </label>
-
-      <button class="dark-button full-width" type="submit">
-        Guardar articulo <span aria-hidden="true">→</span>
-      </button>
-    </form>
-  </dialog>
-
-  <dialog id="imageDialog" class="image-dialog">
-    <button class="close-button image-close-button" id="closeImageButton" type="button" aria-label="Cerrar imagen">×</button>
-    <img id="expandedImage" alt="">
-    <p id="expandedImageTitle"></p>
-  </dialog>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <script src="app.js"></script>
+  <dialog id="imageDialog" class="image-dialog"><button class="close-button image-close-button" id="closeImageButton" type="button" aria-label="Cerrar imagen">×</button><img id="expandedImage" alt=""><p id="expandedImageTitle"></p></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div><script src="app.js"></script>
 </body>
 </html>
